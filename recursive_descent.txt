@@ -1,0 +1,35 @@
+void S(){
+	if(token == TOKEN_d){
+    getToken();
+    new_A();
+    if(token == TOKEN_c){
+      getToken();
+    }
+	}
+	else if(token == TOKEN_b){
+		getToken();
+	}
+	else
+		error("bmd");
+}
+
+
+
+void A(){
+  if(token == TOKEN_b){
+    getToken();
+    if(token == TOKEN_a){
+      getToken();
+      B();
+    }
+    else error("expecting b");
+  }
+}
+
+void B(){
+  if(token == TOKEN_a){
+    getToken();
+    S();
+  }
+  else error("expecting a");
+}

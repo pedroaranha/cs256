@@ -1,0 +1,14 @@
+Motive:
+	For the motive we should change the "murderer(X) :- motive(X), access(X)." to "murderer(X,Y) :- motive(X,Y), access(X).". Then, modify each motives so it returns not only the possible criminal, but their motive as well. For example:
+		motive(X,insane) :- insane(X).
+		motive(X,poor) :- poor(X).
+		motive(X,jealous) :- victim(Y), jealous(X,Y).
+	And then, running "murderer(X,Y)." would give us the murderer and his/her motive.
+
+Weapon:
+	For the weapon we should also change the murderer query to "murderer(X,Y) :- motive(X), access(X,Y)." and then access to "access(X,Y) :- weapon_access(X,Y), key_access(X), crime_access(X)." and after that, all of the weapon_access statements to:
+		weapon_access(X,cone) :- stay(X,thursday,barts).
+		weapon_access(X,cone) :- stay(X,wednesday,yard).
+		weapon_access(X,scepter) :- stay(X,thursday,tower).
+		weapon_access(X,scepter) :- stay(X,wednesday,tower).
+	Run "murderer(X,Y)" for magic.

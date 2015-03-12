@@ -1,0 +1,32 @@
+(print 5) evaluates print to 5
+(let* ((f 5))
+      (+ f 10))
+assign 5 to f (f <- 5)
+
+(let* ((func (lambda (x) ((func (- x 1))))
+             (func 6))))
+because func isn't on the symbol table yet, it's not been evaluated yet (EXPR), reverse rightmost
+
+ID_EXPR_LIST -> (IDENT EXPR)
+we haven't pushed this identifier to the scope when EXPR is evaluated
+
+loop invariants
+P => I
+{I /\ B} S {I}
+{I /\ ~B} => {Q}
+show that loop terminates
+
+while x < 10
+	x = x+1
+end
+{Q: x = 10}
+{x <= 10}
+
+ (+ 6 2)
+   EXPR
+ /  |  \
+( PAREN )
+    |
+  ARITH
+ /  |  \
++   6   2

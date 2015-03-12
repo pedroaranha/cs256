@@ -1,0 +1,16 @@
+S -> aBb | cAd
+A -> eA | f
+B -> gBh | i
+
+FIRST SET: First small letter, including epsilon.
+FOLLOWS SET: First small letter AFTER said big letter, excluding epsilon. If it's a big letter, follow rabbit hole.
+
+
+Eg:
+FIRST(S) -> {a, c}
+FIRST(A) -> {e, f}
+FIRST(B) -> {g, i}
+
+FOLLOWS(S) -> {$}
+FOLLOWS(A) -> {d}
+FOLLOWS(B) -> {b, h}

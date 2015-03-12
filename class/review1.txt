@@ -1,0 +1,46 @@
+Lexical Analyzers
+- Use
+- How they work
+- Let/Flex
+
+Regex
+
+Syntax Analysis
+- Use
+- Yacc/Bison
+- Types of Parsers
+ - Shift/Reduce
+ - Recursive Descent
+
+Ambiguity
+(10 - 7 - 3) could be 6 or 0
+
+Left Recursion Removal
+
+Left Factoring
+
+FIRST/FOLLOWS
+
+
+1. Given the following grammar, remove the left recursion
+
+A -> Cd
+B -> Ce
+C -> A | B | f
+
+(     al1  al2 bet)
+(C -> Cd | Ce | f)
+
+A -> Ad | Bd | fd
+A -> fdA' | BdA'
+A'-> dA' | epsilon
+
+B -> Ae | Be | fe
+B -> feB' | AeB'
+B'-> eB' | epsilon
+
+B in terms of A:
+
+B -> feB' | fdA'eB' | BdA'eB'
+B -> feB'B" | fdA'eB'B"
+B"->

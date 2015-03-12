@@ -1,0 +1,5 @@
+~/Documents/teaching/assignments/hw6$ gcl -load pe14.lisp -load runner.lisp
+
+(8 3) 
+(20 9) 
+(112 27)

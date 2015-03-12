@@ -1,0 +1,27 @@
+?- scary(strax).
+false.
+
+?- monster(jenny).
+false.
+
+?- hasNumFeet(davros, X).
+X = 0.
+
+?- isHuman(X).
+X = rose ;
+X = jenny.
+
+?- wants(X,Y).
+X = davros,
+Y = genocide ;
+X = bucket,
+Y = genocide ;
+X = liberty,
+Y = food ;
+X = strax,
+Y = violence.
+
+?- isTimeWarrior(X).
+X = doctor ;
+X = timothy ;
+X = davros.

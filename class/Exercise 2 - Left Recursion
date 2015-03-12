@@ -1,0 +1,11 @@
+Exercise 2 - Left Recursion
+
+S  -> ABdS' | dSS' | S'
+S' -> AS' | epsilon
+A  -> BdA'A"A"' | aSS'BA'A"A"' | 'A'A"A"'
+A' -> aAA' | epsilon
+A" -> BdS'BA'A" | epsilon
+A"'-> S'A'A"A"' | epsilon
+
+B  -> aBSB' | B'
+B' -> bB' | epsilon
